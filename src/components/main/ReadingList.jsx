@@ -13,6 +13,7 @@ export default function ReadingList() {
 
     return (<>
         <div onDrop={(event) => handleDrop(event)} onDragOver={(event) => event.preventDefault()} style={{ overflow: "auto", border: "1px solid yellow", position: "sticky", top: "2rem", height: "80vh", width: "30vw" }}>
+            <h2>Books: <span>{readingList.length}</span></h2>
             <ul style={{ listStyle: "none", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", padding: "0", margin: "0" }}>
                 {readingList.map((book, index) => (
                     <li key={index} style={{ border: "1px solid violet" }}>
